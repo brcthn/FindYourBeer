@@ -1,0 +1,70 @@
+<template>
+  <div>
+    <div id="app">
+      <v-app-bar shrink-on-scroll color="#fcb69f" height="50" absolute>
+        <v-col align="start">
+          <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+        </v-col>
+      </v-app-bar>
+
+      <v-navigation-drawer v-model="drawer" absolute temporary>
+        <v-list>
+          <v-list-item v-for="item in items" v-bind:key="item">
+            <v-list-item-content>
+              <v-list-item-title>{{item}}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+    </div>
+
+      <div v-for="idx in trailer" v-bind:key="idx">
+        <!-- {{"https://www.youtube.com/embed/"+tr.snippet.resourceId.videoId}} -->
+        <iframe
+          type="iframe"
+          aspect="16by9"
+          width="560"
+          height="315"
+          src="www.youtube.com/watch?v=SBK5Z_N_4TE"
+          allowfullscreen
+        ></iframe>
+      </div>
+  </div>
+
+  <!-- temporary arkayi flu yapar ve disariya tiklayinca kapanmasini saglar -->
+</template>
+
+<script>
+import BootstrapVue from "bootstrap-vue";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+export default {
+  props: ["trailer"],
+
+  data() {
+    return {
+      drawer: null,
+      items: [
+        "Action",
+        "Comedy",
+        "Horror",
+        "Romance",
+        "Thriller",
+        "Drama",
+        "Crime",
+        "Mystery",
+        "Sci-fi",
+        "Animation",
+        "Adventure",
+        "Fantasy",
+        "Comedy-Romance",
+        "Action-Comedy",
+        "Superhero"
+      ]
+    };
+  }
+};
+</script>
+
+<style>
+</style>
