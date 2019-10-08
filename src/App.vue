@@ -1,6 +1,11 @@
 <template>
-  <div id="App">
-    <router-view></router-view>
+  <div>
+    <div id="App">
+      <menuApp>
+        <router-view name="a"></router-view>
+      </menuApp>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -17,11 +22,15 @@ import "vuetify/dist/vuetify.min.css";
 Vue.use(Vuetify);
 import { mapState, mapGetters, mapActions } from "vuex";
 import VueRouter from "vue-router";
+import menuApp from "./components/menuApp.vue";
 
 export default {
   name: "App",
   data() {
     return {};
+  },
+  components: {
+    menuApp
   }
 };
 </script>
