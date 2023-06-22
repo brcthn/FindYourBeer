@@ -31,14 +31,9 @@ Vue.use(Vuex);
 //             commit()
 //         }
 //     }
-
-
-
-
-    // updateUserName({commit},name){
-    //     commit('setUserName',name);
-    // }
-
+// updateUserName({commit},name){
+//     commit('setUserName',name);
+// }
 
 // const store =new Vuex.Store({
 // state,

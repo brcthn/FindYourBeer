@@ -3,17 +3,16 @@
     <v-img class="back" src= "@/assets/back.png" @click="$router.go(-1)" ></v-img>
     <v-container>
       <v-layout row wrap>
-        <v-flex xs5 offset-xs5 md5 offset-md5  xl5 offset-xl5>
+        <v-flex xs5 offset-xs1 md5 offset-md1  xl5 offset-xl1>
           <v-btn small color="#7986CB" @click="logIn">Login</v-btn>
         </v-flex>
         <div id="isLogin" class="mt-5">
-          
           <v-flex id="posts" class="mt-5" ></v-flex>
           <div id="chat">
-            <v-flex xs6 offset-xs9 md6 offset-md9 xl6 offset-xl9>
+            <v-flex xs6 offset-xs md6 offset-md6 xl6 offset-xl6>
               <input id="message" type="text"/>
             </v-flex>
-            <v-flex xs5 offset-xs5 md6 offset-md5 xl6 offset-xl5>
+            <v-flex  xs5 offset-xs5 md5 offset-md5  xl6 offset-xl5>
               <v-btn small color="#7986CB" @click="writePosts()">Send post</v-btn>
             </v-flex>
           </div>
@@ -118,9 +117,5 @@ export default {
   border-radius: 10px 1px;
   border: 1px solid #7986CB;  
 }
-
-
-
-  
 
 </style>
